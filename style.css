@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.slides {
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.slides:nth-child(1) {
+  background-color: lightcoral;
+}
+.slides:nth-child(2) {
+  background-color: rgb(230, 193, 173);
+}
+.slides:nth-child(3) {
+  background-color: lightseagreen;
+}
+.slides:nth-child(4) {
+  background-color: rgb(235, 235, 167);
+}
+.slides:nth-child(5) {
+  background-color: rgb(211, 236, 188);
+}
+.slides:nth-child(6) {
+  background-color: rgb(170, 235, 222);
+}
+.slides:nth-child(7) {
+  background-color: rgb(136, 174, 213);
+}
+.slides:nth-child(8) {
+  background-color: rgb(62, 92, 123);
+}
+.slides:nth-child(9) {
+  background-color: rgb(149, 83, 235);
+}
+.slides:nth-child(10) {
+  background-color: rgb(222, 81, 237);
+}
+.slides:nth-child(11) {
+  background-color: rgb(208, 100, 150);
+}
+.slides:nth-child(12) {
+  background-color: rgb(212, 129, 101);
+}
+.slides:nth-child(13) {
+  background-color: rgb(202, 154, 108);
+}
+.slides:nth-child(14) {
+  background-color: rgb(70, 152, 112);
+}
+.slides:nth-child(15) {
+  background-color: rgb(76, 121, 157);
+}
+.slides:nth-child(16) {
+  background-color: rgb(163, 74, 74);
+}
+.slides:nth-child(17) {
+  background-color: rgb(163, 117, 74);
+}
+.slides:nth-child(18) {
+  background-color: rgb(74, 147, 163);
+}
+.slides:nth-child(19) {
+  background-color: rgb(150, 74, 163);
+}
+.slides:nth-child(20) {
+  background-color: rgb(74, 113, 163);
+}
+.slides:nth-child(21) {
+  background-color: rgb(74, 163, 108);
+}
+.slides:nth-child(22) {
+  background-color: rgb(163, 74, 132);
+}
+.slides:nth-child(23) {
+  background-color: rgb(84, 163, 74);
+}
+.slides:nth-child(24) {
+  background-color: rgb(74, 163, 111);
+}
+.slides:nth-child(25) {
+  background-color: rgb(102, 74, 163);
+}
+.slides:nth-child(26) {
+  background-color: rgb(74, 96, 163);
+}
+.slides:nth-child(27) {
+  background-color: rgb(74, 156, 163);
+}
+.slides:nth-child(28) {
+  background-color: rgb(74, 163, 121);
+}
+.slides:nth-child(29) {
+  background-color: rgb(74, 96, 163);
+}
+.slides:nth-child(30) {
+  background-color: rgb(163, 114, 74);
+}
+.slides:nth-child(31) {
+  background-color: rgb(163, 74, 74);
+}
