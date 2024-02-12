@@ -1,121 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/*
+The City Lights
+HTML5 Canvas Visualization of Gert Strydom's Poem
+Dev: Steve Belovarich
+Website: stephenbelovarich.com
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+Recently I've been experimenting with Javascript in ePub 3, primarily for iBooks. ePub breathes new life into poems and stories in ways that people haven't even begun to experiment with. Its a shame when firms just photocopy the physical version of a book into ePub. Authors lose out on so much potential interactivity.
+
+ePub is a wide frontier for developers and designers.
+
+If you've got an idea for an eBook and need and interactive designer to breathe life into the design, contact steve@installationspace.com. 
+*/
+
+body {margin:0;padding:0;}
+canvas{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
-
-html {
-  font-family: "Poppins", sans-serif;
+#poem {
+	position: absolute;
+	top: 0px;
+	left:50%;
+	width: 480px;
+	height: 100%;
+	margin-left: -240px;
+	font: 1.4em "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: 0.12em 0.12em 0.36em #da6e0e;
+	color:#fff;
 }
-
-.container {
-  width: 100%;
-  height: 100vh;
+#poem ul {
+	list-style-type: none;
+	margin-left:-36px;
+}
+#poem li {
+	padding-bottom:0.8em;
+	opacity:0.8;
+}
+#poem h3 {
+	margin-right:64px;
+  margin-top:-12px;
+	text-align:right;
+}
+.poem-container {
+  height: 80%;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  border-radius: 10px;
 }
 
-.slides {
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
 }
 
-.slides:nth-child(1) {
-  background-color: lightcoral;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #091b59;
 }
-.slides:nth-child(2) {
-  background-color: rgb(230, 193, 173);
-}
-.slides:nth-child(3) {
-  background-color: lightseagreen;
-}
-.slides:nth-child(4) {
-  background-color: rgb(235, 235, 167);
-}
-.slides:nth-child(5) {
-  background-color: rgb(211, 236, 188);
-}
-.slides:nth-child(6) {
-  background-color: rgb(170, 235, 222);
-}
-.slides:nth-child(7) {
-  background-color: rgb(136, 174, 213);
-}
-.slides:nth-child(8) {
-  background-color: rgb(62, 92, 123);
-}
-.slides:nth-child(9) {
-  background-color: rgb(149, 83, 235);
-}
-.slides:nth-child(10) {
-  background-color: rgb(222, 81, 237);
-}
-.slides:nth-child(11) {
-  background-color: rgb(208, 100, 150);
-}
-.slides:nth-child(12) {
-  background-color: rgb(212, 129, 101);
-}
-.slides:nth-child(13) {
-  background-color: rgb(202, 154, 108);
-}
-.slides:nth-child(14) {
-  background-color: rgb(70, 152, 112);
-}
-.slides:nth-child(15) {
-  background-color: rgb(76, 121, 157);
-}
-.slides:nth-child(16) {
-  background-color: rgb(163, 74, 74);
-}
-.slides:nth-child(17) {
-  background-color: rgb(163, 117, 74);
-}
-.slides:nth-child(18) {
-  background-color: rgb(74, 147, 163);
-}
-.slides:nth-child(19) {
-  background-color: rgb(150, 74, 163);
-}
-.slides:nth-child(20) {
-  background-color: rgb(74, 113, 163);
-}
-.slides:nth-child(21) {
-  background-color: rgb(74, 163, 108);
-}
-.slides:nth-child(22) {
-  background-color: rgb(163, 74, 132);
-}
-.slides:nth-child(23) {
-  background-color: rgb(84, 163, 74);
-}
-.slides:nth-child(24) {
-  background-color: rgb(74, 163, 111);
-}
-.slides:nth-child(25) {
-  background-color: rgb(102, 74, 163);
-}
-.slides:nth-child(26) {
-  background-color: rgb(74, 96, 163);
-}
-.slides:nth-child(27) {
-  background-color: rgb(74, 156, 163);
-}
-.slides:nth-child(28) {
-  background-color: rgb(74, 163, 121);
-}
-.slides:nth-child(29) {
-  background-color: rgb(74, 96, 163);
-}
-.slides:nth-child(30) {
-  background-color: rgb(163, 114, 74);
-}
-.slides:nth-child(31) {
-  background-color: rgb(163, 74, 74);
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5555555a;
 }
